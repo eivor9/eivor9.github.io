@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nasheed Jeremiah | Full Stack Developer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #6366f1;
+      --secondary: #10b981;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
+
+    /* PAGE */
+    .page { max-width: 880px; margin: 0 auto; padding: 96px 24px 120px; }
+
+    /* HERO */
+    .hero { text-align: center; margin-bottom: 120px; }
+    .hero h1 {
+      font-size: 3.25rem; font-weight: 700; letter-spacing: -0.025em;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0; transform: translateY(20px);
+      animation: fadeSlide 1s ease forwards;
+    }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 580px; margin: 0 auto 28px; }
+    .hero-links { display: flex; justify-content: center; gap: 28px; }
+
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTIONS */
+    section { margin-bottom: 120px; text-align: center; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    section.visible { opacity: 1; transform: translateY(0); }
+    section h2 { font-size: 1.9rem; letter-spacing: -0.02em; margin-bottom: 48px; }
+
+    /* CARD */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+      text-align: left;
+      transition: all 0.25s ease;
+    }
+    .card + .card { margin-top: 56px; }
+    .card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12); }
+    .card h3 { font-size: 1.35rem; margin-bottom: 12px; }
+    .card p { color: var(--muted); margin-bottom: 24px; font-size: 0.95rem; }
+
+    /* BULLETS */
+    .bullets { list-style: none; padding: 0; margin: 0 0 28px 0; }
+    .bullets li {
+      margin-bottom: 10px; font-size: 0.95rem; padding-left: 18px; position: relative;
+    }
+    .bullets li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+    /* TAGS */
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag { padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; background: #eef2ff; color: #4338ca; font-weight: 500; }
+
+    /* PROJECT MEDIA */
+    .project-media { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    .screenshots { margin-top: 16px; }
+    .screenshots img {
+      width: 100%; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .screenshots img:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(15,23,42,0.12); }
+
+    /* CONTACT */
+    .contact { text-align: center; max-width: 520px; margin: 0 auto; }
+
+    footer { text-align: center; font-size: 0.85rem; color: var(--muted); }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Nasheed Jeremiah</h1>
+      <p>
+        Full Stack Developer building clean, scalable, production-ready systems
+        across frontend and backend platforms using React, TypeScript, Go, and Python.
+      </p>
+      <div class="hero-links">
+        <a href="mailto:njeremiah@pursuit.org" target="_blank">Email</a>
+          <a href="http://linkedin.com/in/nasheedjeremiah/" target="_blank">LinkedIn</a>
+          <a href="http://github.com/eivor9" target="_blank">GitHub</a>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT -->
+    <section>
+      <h2>Featured Project</h2>
+
+      <div class="card project-media">
+        <div>
+          <h3>Mentor Volunteer Platform</h3>
+          <p>
+            A volunteer-driven platform connecting mentors and mentees through structured learning paths, with integrated chat and 
+video meetings for seamless collaboration.
+          </p>
+
+          <ul class="bullets">
+            <li>Built and refined React + TypeScript UI components</li>
+            <li>Improved onboarding and profile usability</li>
+            <li>Collaborated with designers and engineers in a volunteer team</li>
+            <li>Focused on accessibility, clarity, and UX polish</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+	<span class="tag">Express.js</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Volunteer</span>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <a href="https://mentorvolunteerplatform.netlify.app" target="_blank" style="font-weight: 600; color: var(--accent);">View Live Project →</a>
+          </div>
+        </div>
+
+        <div class="screenshots">
+          <a href="https://mentorvolunteerplatform.netlify.app" target="_blank">
+            <img src="assets/homepage.png" alt="Mentor Volunteer Platform Home Page" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section>
+      <h2>Work Experience</h2>
+
+      <div class="card">
+        <h3>Full Stack Developer — Uber</h3>
+        <p>
+          Internal tools supporting large-scale infrastructure planning and
+          forecasting.
+        </p>
+
+        <ul class="bullets">
+          <li>Shipped production React/TypeScript interfaces</li>
+          <li>Built scalable backend services in Go</li>
+          <li>Developed SQL & Python data pipelines</li>
+          <li>Improved reliability and maintainability of legacy systems</li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Go</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET IN TOUCH -->
+    <section>
+      <h2>Get in Touch</h2>
+
+      <div class="contact">
+        <p>
+          Interested in working together or learning more?
+          I’m always open to new opportunities and conversations.
+        </p>
+
+        <div class="hero-links">
+          <a href="mailto:njeremiah@pursuit.org" target="_blank">Email</a>
+          <a href="http://linkedin.com/in/nasheedjeremiah/" target="_blank">LinkedIn</a>
+          <a href="http://github.com/eivor9" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Nasheed Jeremiah
+    </footer>
+
+  </main>
+
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+
+</body>
+</html>
